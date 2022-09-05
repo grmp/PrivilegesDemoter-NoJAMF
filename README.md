@@ -20,9 +20,8 @@ So far we have confirmed that there is an admin user on the machine, and that us
 1. Upload a package from the [releases page](https://github.com/sgmills/PrivilegesDemoter/releases).
     1. There are two packages, one with just the PrivilegesDemoter pieces, and one that includes the Privileges Application. I reccomend deploying `PrivilegesDemoter_PrivilegesApp-2.0` as that ensures the Privileges application is installed properly.
 1. Create a policy to install the package on your devices.
-2. Add the [Demote Admin Privileges.sh](https://github.com/sgmills/PrivilegesDemoter/blob/main/Demote%20Admin%20Privileges.sh) script to Jamf Pro.
-3. Create a Jamf Pro policy to run "Demote Admin Privileges.sh" with custom trigger "privilegesDemote", set it to ongoing and make it available offline. Scope to all devices with Privileges installed. <img width="679" alt="Screen Shot 2021-11-22 at 11 07 31 AM" src="https://user-images.githubusercontent.com/1520833/142895481-f186ac1d-0560-49a8-943d-48bf7d543d5b.png">
-4. Configure the options for `Demote Admin Privileges.sh` by editing the script, or using Jamf Pro script parameters.
+2. Save [Demote Admin Privileges.sh](https://github.com/sgmills/PrivilegesDemoter/blob/main/Demote%20Admin%20Privileges.sh) to /Library/Management/COMPANY/Privileges/demote.sh
+3. Configure the options for `demote.sh` by editing the script
     1. `help_button_status` should be set to 1 to enable the help button, or 0 to disable.
     2. `help_button_type` may be set to either `link` or `infopopup`
     3. `help_button_payload` defines the payload for the help button. Either a URL for link type, or text for infopopup type.
