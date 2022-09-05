@@ -7,10 +7,8 @@
 	<string>blog.mostlymac.privileges.demote</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/usr/local/bin/jamf</string>
-		<string>policy</string>
-		<string>-event</string>
-		<string>privilegesDemote</string>
+		<string>/bin/bash</string>
+		<string>/Library/Management/COMPANY/Privileges/demote.sh</string>
 	</array>
 	<key>WatchPaths</key>
 	<array>
